@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ModifyInfo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ModifyInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:text="회원정보 수정하기"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <!-- DB에 저장되어있는 회원의 원래 닉네임을 넣는 부분 구현 필요-->
+            <TextView
+                android:id="@+id/originalnickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="원래 닉네임: "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/modifynickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/originalnickname"
+                android:text="변경할 닉네임: "
+                android:textSize="20dp" />
+
+            <!-- DB에 저장되어있는 회원의 원래 비밀번호를 넣는 부분 구현 필요-->
+            <TextView
+                android:id="@+id/originalpsw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/modifynickname"
+                android:layout_marginTop="20dp"
+                android:text="원래 비밀번호: "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/modifypsw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/originalpsw"
+                android:text="변경할 비밀번호: "
+                android:textSize="20dp" />
+
+            <!-- DB에 저장되어있는 회원의 원래 전화번호를 넣는 부분 구현 필요-->
+            <TextView
+                android:id="@+id/originalphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/modifypsw"
+                android:layout_marginTop="20dp"
+                android:text="원래 전화번호: "
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/modifyphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/originalphone"
+                android:text="변경할 전화번호: "
+                android:textSize="20dp" />
+
+
+            <!-- 저장 버튼 -->
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="저장" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPageFragment">
+
+    <ImageView
+        android:id="@+id/Profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@mipmap/ic_launcher" />
+
+    <!-- (구현 필요)
+    닉네임 부분: DB에 저장된 해당 회원의 닉네임을 가져 와야함
+    -->
+    <EditText
+        android:id="@+id/NickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:text="((DB에 저장된 닉네임))"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/Profile"/>
+
+
+    <!--(구현 필요)
+    별점 부분: DB에 저장된 해당 회원의 별점 개수를 가져 와야함
+    -->
+    <TextView
+        android:id="@+id/StarScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 별점 : ((DB로부터 연동된 별점 개수))"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/Profile" />
+
+    <Button
+        android:id="@+id/ModifyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원 정보 수정하기"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/StarScore" />
+
+    <Button
+        android:id="@+id/Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내 주소 설정"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/ModifyInfo" />
+
+</RelativeLayout>
